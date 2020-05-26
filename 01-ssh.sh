@@ -18,3 +18,20 @@ sudo service ssh restart
 
 # 07, 退出 ssh 终端, 以 root 身份重连 vps
 ssh root@<vps ip地址>
+
+# 08, vps 上生成 ssh key
+ssh-keygen -C "tencent-vps"
+
+# 09, 将 vps 的 ssh public key 添加到项目的部署公钥中或 git 服务商账户公钥中
+# 10, 拉取 deployment
+cd
+mkdir code
+cd code
+git clone git@github.com:abiaqiou/deployment.git
+
+# 11, 克隆完成后, 使用 bash 命令执行后续 sh 文件
+cd deployment
+bash 02-ufw.sh
+bash 03-shell.sh
+bash 04-docker.sh
+bash 05-docker-compose.sh

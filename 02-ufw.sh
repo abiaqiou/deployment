@@ -1,6 +1,8 @@
 # Uncomplicated Firewall
 # https://help.ubuntu.com/community/UFW
 
+apt update
+
 apt-get install ufw
 ufw allow 22
 ufw allow 80

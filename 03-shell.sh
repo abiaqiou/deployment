@@ -1,5 +1,7 @@
+apt update
+
 # 01, 安装 zsh
-sudo apt-get install zsh
+apt-get install zsh
 
 # 02, 设置 zsh 为默认 shell
 chsh -s $(which zsh)

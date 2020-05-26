@@ -1,5 +1,4 @@
-# 切换当前用户到 root
-sudo su
+apt update
 
 # https://docs.docker.com/compose/install/#install-compose-on-linux-systems
 # 查看上述链接获取最新版本号, 目前最新: 1.25.5
