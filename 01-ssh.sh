@@ -35,3 +35,14 @@ bash 02-ufw.sh
 bash 03-shell.sh
 bash 04-docker.sh
 bash 05-docker-compose.sh
+
+# 12, 更换源(可选)
+# apt
+# https://developer.aliyun.com/mirror/ubuntu
+copy sources.list /etc/apt/sources.list
+# pip
+# https://developer.aliyun.com/mirror/pypi
+copy pip.conf ~/.pip/pip.conf
+# npm
+# https://developer.aliyun.com/mirror/npm
+npm install -g cnpm --registry=https://registry.npm.taobao.org

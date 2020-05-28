@@ -28,3 +28,13 @@ apt install -y docker-ce
 
 # 验证安装结果
 docker run hello-world
+
+# https://lug.ustc.edu.cn/wiki/mirrors/help/docker
+# 更换源
+nano /etc/docker/daemon.json
+# 在上述配置文件中加入
+{
+  "registry-mirrors": ["https://docker.mirrors.ustc.edu.cn"]
+}
+# 重启 docker
+service docker restart
